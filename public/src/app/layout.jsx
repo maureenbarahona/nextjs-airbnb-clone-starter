@@ -1,7 +1,9 @@
-import React from "react";
+import "./globals.css";
 
-const layout = () => {
-  return <div>layout</div>;
-};
-
-export default layout;
+export default function RootLayout({children}){
+  return <html lang="en">
+    <body>
+      {children}
+    </body>
+  </html>
+}
