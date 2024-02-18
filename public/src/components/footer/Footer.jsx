@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { FiGlobe } from "react-icons/fi";
+import {PiCaretUpBold } from "react-icons/pi";
 
 export default function Footer() {
   const links = [
@@ -21,6 +23,17 @@ export default function Footer() {
         </Link>
       </li>
       ))}
+    </ul>
+    <ul>
+      <ul className="flex gap-4 font-medium">
+        <li className="flex items-center gap-2 cursor-pointer">
+          <FiGlobe/> English (IN)
+        </li>
+        <li className="cursor-pointer">$ USD</li>
+        <li className="flex items-center gap-2 cursor-pointer ">
+          Support & resources <PiCaretUpBold/>
+        </li>
+      </ul>
     </ul>
   </div>);
 }
