@@ -7,6 +7,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import ContextMenu from "../common/ContextMenu";
 
 const Navbar = () => {
+
+
   const [isContextMenuVisible, setIsContextMenuVisible] = useState(false);
 
   const contextMenuOptions = [
