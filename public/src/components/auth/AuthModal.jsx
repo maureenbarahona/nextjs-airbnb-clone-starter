@@ -2,8 +2,11 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import FormInput from "../common/FormInput";
+import { useAppStore } from "airbnb/store/store";
 
 const AuthModal = () => {
+  const { setAuthModal } = useAppStore();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -26,7 +29,10 @@ const AuthModal = () => {
           >
             <div className="bg-white pb-4 pt-5">
               <div className="border-b border-b-gray-200 flex items-center justify-center relative pb-5">
-                <span className="absolute left-5 cursor-pointer text-lg">
+                <span
+                  className="absolute left-5 cursor-pointer text-lg"
+                  onClick={() => setAuthModal()}
+                >
                   <IoMdClose />
                 </span>
                 <span>Log in or signup</span>
